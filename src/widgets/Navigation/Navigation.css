@@ -1,0 +1,23 @@
+.navigation{
+    background-color: #142624;
+    padding: 7px 0 7px 0;
+    position: fixed;
+    width: 100%!important;
+    z-index: 999999;
+}
+
+.nav-text{
+    color: white!important;
+}
+.nav-link{
+    color: white;
+    font-size: 24px;
+    letter-spacing: 7px;
+    font-weight: 600;
+}
+
+.logo-image{
+    width: 15%;
+    float: left;
+    margin :0 40px 0 10px;
+}

@@ -1,0 +1,20 @@
+.list-item{
+    background-color: rgba(0,0,0,0)!important;
+    border-color: rgba(0, 0, 0, 0) !important;
+    margin-bottom: 80px;
+    padding:0!important;
+}
+.alert{
+    margin: 0 10px 0 10px!important;
+    background-color: white;
+    border-radius: 10px!important;
+    display: none;
+}
+
+h2{
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+p{
+    font-size: 20px;
+}
