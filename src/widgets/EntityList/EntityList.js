@@ -9,7 +9,9 @@ import './EntityList.css';
 const EntityList = () => (
     <div>
         <div class="m-5"></div>    
-    <ListGroup>
+        <ListGroup>
+            <ListItem data={entityContent.Ship} />
+            <ListItem data={entityContent.Haddock} />
             <ListItem data={entityContent.Orca} />
             <ListItem data={entityContent.Buckelwal} />
             <ListItem data={entityContent.Pottwal} />

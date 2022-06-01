@@ -1,20 +1,31 @@
-.list-item{
-    background-color: rgba(0,0,0,0)!important;
+.list-item {
+    background-color: rgba(0, 0, 0, 0) !important;
     border-color: rgba(0, 0, 0, 0) !important;
     margin-bottom: 80px;
-    padding:0!important;
-}
-.alert{
-    margin: 0 10px 0 10px!important;
-    background-color: white;
-    border-radius: 10px!important;
-    display: none;
+    padding: 0 !important;
 }
 
-h2{
+h2 {
     letter-spacing: 2px;
     font-weight: 200;
 }
-p{
+
+p {
     font-size: 20px;
+}
+.play-container{
+    width:100%;
+}
+.play-text{
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}
+.play-button{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: #4f75d6;
+    padding: 20px 0 0 20px;
+    margin: 10px auto 5px auto;
 }
