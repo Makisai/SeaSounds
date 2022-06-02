@@ -10,12 +10,16 @@ const EntityList = () => (
     <div>
         <div class="m-5"></div>    
         <ListGroup>
+            <ListItem data={entityContent.RossRobbe} />
             <ListItem data={entityContent.Ship} />
             <ListItem data={entityContent.Haddock} />
+            <ListItem data={entityContent.Weißseitendelfin} />
             <ListItem data={entityContent.Orca} />
-            <ListItem data={entityContent.Buckelwal} />
             <ListItem data={entityContent.Pottwal} />
-            <ListItem data={entityContent.RossRobbe} />
+            <ListItem data={entityContent.HertzWal} />
+            <ListItem data={entityContent.Bloop} /> 
+            <ListItem data={entityContent.Whistle} /> 
+            <ListItem data={entityContent.Upsweep} />            
       </ListGroup>
     </div>
     
