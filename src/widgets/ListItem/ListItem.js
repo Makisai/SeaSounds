@@ -1,34 +1,46 @@
-import React, { useState } from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import { SoundWave } from 'react-bootstrap-icons';
-import { MusicNoteList } from 'react-bootstrap-icons';
+import React, { useState } from "react";
+import ListGroup from "react-bootstrap/ListGroup";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { SoundWave } from "react-bootstrap-icons";
+import { MusicNoteList } from "react-bootstrap-icons";
+import { io } from "socket.io-client";
+import "./ListItem.css";
 
+const socket = io("ws://localhost:4000");
 
+socket.on("connect", () => {
+  console.log(socket.id);
+});
 
-import './ListItem.css';
-
+socket.on("position", (position) => {
+  console.log(position);
+})
 
 
 function ListItem(props) {
-
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
-      <>
-          
-        <div>
+    <>
+      <div>
         <ListGroup.Item className="list-item">
-            <img onClick={() => setModalShow(true)} src={'/images/' + props.data.imagePath} style={{ marginLeft: props.data.marginLeft, width: props.data.width }}/>
+          <img
+            onClick={() => setModalShow(true)}
+            src={"/images/" + props.data.imagePath}
+            style={{
+              marginLeft: props.data.marginLeft,
+              width: props.data.width,
+            }}
+          />
         </ListGroup.Item>
-    </div>
+      </div>
       <MyVerticallyCenteredModal
         show={modalShow}
-              onHide ={() => setModalShow(false)}
-              name = {props.data.name}
-              infoText = {props.data.infoText}
-              
+        onHide={() => setModalShow(false)}
+        name={props.data.name}
+        infoText={props.data.infoText}
+        soundName={props.data.soundName}
       />
     </>
   );
@@ -36,8 +48,10 @@ function ListItem(props) {
 
 export default ListItem;
 
-
 function MyVerticallyCenteredModal(props) {
+  const playSound = () => {
+    socket.emit("add_to_queue",localStorage.getItem('userId'), props.soundName)
+  };
   return (
     <Modal
       {...props}
@@ -50,20 +64,16 @@ function MyVerticallyCenteredModal(props) {
           {props.name}
         </Modal.Title>
       </Modal.Header>
-          <Modal.Body>
-              <div class="play-container">
-                <div class="play-button">
-                      <MusicNoteList color="white" size={50} />
-                </div>
-                <p class="play-text">Sound abspielen</p>
-              </div>
-              <hr></hr>
-            <p>
-            {props.infoText}
-            </p>
+      <Modal.Body>
+        <div class="play-container">
+          <div class="play-button" onClick={playSound}>
+            <MusicNoteList color="white" size={50} />
+          </div>
+          <p class="play-text">Sound abspielen</p>
+        </div>
+        <hr></hr>
+        <p>{props.infoText}</p>
       </Modal.Body>
     </Modal>
   );
 }
-
-

@@ -1,5 +1,5 @@
 {
-     "Ship": {
+    "Ship": {
         "name": "Containerschiffe",
         "imagePath": "Ship.png",
         "infoText": "Frachtschiffe erzeugen Geräusche auf ähnlichen Frequenzen wie die im Wasser lebenden Säugetiere. Dies hat zur Folge, dass z.B. die Kommunikationswege von Walen empfindlich gestört werden. Mit steigendem Schiffsverkehr nehmen diese Probleme immer mehr zu.",
@@ -7,7 +7,7 @@
         "marginLeft": "10%",
         "width": "90%"
     },
-     "Haddock": {
+    "Haddock": {
         "name": "Schellfisch",
         "imagePath": "Haddock.png",
         "infoText": "Der männliche Schellfisch ist besonders gesprächsfreudig während der Laichzeit.  Zwischen Januar und Juni produziert der Schellfisch charakterische Sounds unterhalb von 600 Hz, welche mit steigender Größe des Tieres immer tiefer werden.",
@@ -73,7 +73,7 @@
     },
     "Upsweep": {
         "name": "Upsweep",
-        "imagePath": "Placeholder.png",
+        "imagePath": "Upsweep.png",
         "infoText": "Als Upsweep wird ein Geräusch bezeichnet, welches seit 1991 durch Hydrophone im Pazifischen Ozean aufgenommen wird. Die Intensität des Klanges unterliegt saisonalen Schwankungen. Nach der Meinung einiger Experten handelt es sich hierbei um Aktivitäten vulkanischem Ursprungs.",
         "soundName": "Upsweep.mp4",
         "marginLeft": "10%",
