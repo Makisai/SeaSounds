@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 import ListItem from '../ListItem/ListItem';
@@ -6,24 +6,28 @@ import entityContent from '../../content/entityContent.json';
 
 import './EntityList.css';
 
-const EntityList = () => (
-    <div>
+const EntityList = (props) => {
+    useEffect(() => {
+        console.log("EnityList",props.socket);
+    },[])
+
+    return <div>
         <div class="m-5"></div>    
         <ListGroup>
-            <ListItem data={entityContent.Ship} />
-            <ListItem data={entityContent.RossRobbe} />
-            <ListItem data={entityContent.Haddock} />
-            <ListItem data={entityContent.Weißseitendelfin} />
-            <ListItem data={entityContent.Orca} />
-            <ListItem data={entityContent.Pottwal} />
-            <ListItem data={entityContent.HertzWal} />
-            <ListItem data={entityContent.Bloop} /> 
-            <ListItem data={entityContent.Upsweep} />   
-            <ListItem data={entityContent.Whistle} /> 
+            <ListItem data={entityContent.Ship} socket={props.socket}/>
+            <ListItem data={entityContent.RossRobbe} socket={props.socket} />
+            <ListItem data={entityContent.Haddock} socket={props.socket} />
+            <ListItem data={entityContent.Weißseitendelfin} socket={props.socket} />
+            <ListItem data={entityContent.Orca} socket={props.socket} />
+            <ListItem data={entityContent.Pottwal} socket={props.socket} />
+            <ListItem data={entityContent.HertzWal} socket={props.socket} />
+            <ListItem data={entityContent.Bloop} socket={props.socket} /> 
+            <ListItem data={entityContent.Upsweep} socket={props.socket} />   
+            <ListItem data={entityContent.Whistle} socket={props.socket} /> 
         </ListGroup>
-    </div>
+    </div>;
     
-);
+};
 
 export default EntityList;
 

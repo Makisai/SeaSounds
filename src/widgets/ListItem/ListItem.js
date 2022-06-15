@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -7,19 +7,12 @@ import { MusicNoteList } from "react-bootstrap-icons";
 import { io } from "socket.io-client";
 import "./ListItem.css";
 
-const socket = io("ws://localhost:4000");
-
-socket.on("connect", () => {
-  console.log(socket.id);
-});
-
-socket.on("position", (position) => {
-  console.log(position);
-})
-
-
-function ListItem(props) {
+const ListItem = (props) => {
+  useEffect(() => {
+      console.log("EnityList",props.socket);
+  },[])
   const [modalShow, setModalShow] = React.useState(false);
+  
 
   return (
     <>
@@ -41,6 +34,7 @@ function ListItem(props) {
         name={props.data.name}
         infoText={props.data.infoText}
         soundName={props.data.soundName}
+        socket={props.socket}
       />
     </>
   );
@@ -50,7 +44,8 @@ export default ListItem;
 
 function MyVerticallyCenteredModal(props) {
   const playSound = () => {
-    socket.emit("add_to_queue",localStorage.getItem('userId'), props.soundName)
+    console.log(props)
+    props.socket.emit("add_to_queue",localStorage.getItem('userId'), props.soundName)
   };
   return (
     <Modal
