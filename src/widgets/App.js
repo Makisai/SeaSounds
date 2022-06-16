@@ -8,6 +8,9 @@ import { io } from "socket.io-client";
 
 import "./App.css";
 import { createRenderer } from "react-dom/test-utils";
+import { useDispatch, useSelector } from "react-redux";
+import { setPosition } from "./positionSlice";
+
 
 const socket = io("ws://localhost:4000");
 
@@ -16,6 +19,10 @@ socket.on("session", ({ sessionID, userID }) => {
   localStorage.setItem("sessionID", sessionID);
   socket.userID = userID;
 });
+
+/*socket.on("position", (position) => {
+  dispach(setPosition(position))
+});*/
 
 const App = () => {
   useEffect(() => {
@@ -28,6 +35,9 @@ const App = () => {
       socket.connect();
     }
   }, []);
+
+ /* const getPosition = useSelector(state => state.position.value);
+  const dispach = useDispatch();*/
 
   return (
     <div>

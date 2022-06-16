@@ -9,7 +9,7 @@ import "./ListItem.css";
 
 const ListItem = (props) => {
   useEffect(() => {
-      console.log("EnityList",props.socket);
+      console.log("ListItem",props.socket);
   },[])
   const [modalShow, setModalShow] = React.useState(false);
   
