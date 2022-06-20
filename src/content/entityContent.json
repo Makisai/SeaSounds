@@ -3,7 +3,7 @@
         "name": "Containerschiffe",
         "imagePath": "Ship.png",
         "infoText": "Frachtschiffe erzeugen Geräusche auf ähnlichen Frequenzen wie die im Wasser lebenden Säugetiere. Dies hat zur Folge, dass z.B. die Kommunikationswege von Walen empfindlich gestört werden. Mit steigendem Schiffsverkehr nehmen diese Probleme immer mehr zu.",
-        "soundName": "vessel.mp4",
+        "soundName": "01_Vessel.wav",
         "marginLeft": "10%",
         "width": "90%"
     },
@@ -11,7 +11,7 @@
         "name": "Schellfisch",
         "imagePath": "Haddock.png",
         "infoText": "Der männliche Schellfisch ist besonders gesprächsfreudig während der Laichzeit.  Zwischen Januar und Juni produziert der Schellfisch charakterische Sounds unterhalb von 600 Hz, welche mit steigender Größe des Tieres immer tiefer werden.",
-        "soundName": "haddock.mp4",
+        "soundName": "03_Haddock.wav",
         "marginLeft": "0%",
         "width": "85%"
     },
@@ -19,7 +19,7 @@
         "name": "Der Schwertwal",
         "imagePath": "Orca.PNG",
         "infoText": "Schwertwale produzieren Laute nicht nur, um mit anderen Walen zu kommunizieren. Sie verwenden Töne auch, um durch das Meer zu navigieren. Mit dieser Echolocations-Technik  haben Schwertwale z.B. die Möglichkeit Lachse anhand der Größe und Ausrichtung ihrer Schwimmblase zu erkennen.",
-        "soundName": "orca.mp4",
+        "soundName": "05_Orca.wav",
         "marginLeft": "30%",
         "width": "50%"
     },    
@@ -27,7 +27,7 @@
         "name": "Der Pottwal",
         "imagePath": "Pottwal.PNG",
         "infoText": "Der Pottwal ist in der Lage ungewöhnliche höhe Töne zu erzeugen. Diese können einen Schalldruckpegel von bis zu 230 dB erreichen. Zum Vergleich ein Kanonenschuss hat in etwa 150 dB.",
-        "soundName": "Pottwal.mp4",
+        "soundName": "06_Sperm_Whale.wav",
         "marginLeft": "10%",
         "width": "70%"
     },
@@ -35,7 +35,7 @@
         "name": "Die Ross Robbe",
         "imagePath": "RossRobbe.PNG",
         "infoText": "Wenn eine junge Robbe von seiner Mutter getrennt wird stößt es Kontaktlaute aus. Diese werden vom Menschen als “heulen” wahrgenommen aus welchem Grund junge Seehunde oft als “Heuler” bezeichnet werden.",
-        "soundName": "RossRobbe.mp4",
+        "soundName": "02_Seal.wav",
         "marginLeft": "15%",
         "width": "85%"
     },
@@ -43,7 +43,7 @@
         "name": "Der Weißseitendelfin",
         "imagePath": "Dolphin.png",
         "infoText": "Delfine haben ein sehr komplexes Sprachsystem, um mit anderen Delfinen zu kommunizieren. So haben Delfine meist einen eigenen Erkennungspfiff, welcher spezifisch zu dem individuellen Delfin ist.",
-        "soundName": "delphin.mp4",
+        "soundName": "04_Dolphin.wav",
         "marginLeft": "0%",
         "width": "80%"
     },
@@ -51,7 +51,7 @@
         "name": "Der 52-Hertz-Wal",
         "imagePath": "52hz.png",
         "infoText": "Beim 52-Hertz-Wal handelt es sich um einen individuellen Wal, der als einziger auf einer für ihn charakteristischen Frequenz von 52 Hertz singt. Durch diesen Faktor kann er nicht mit anderen Walen kommunizieren und wird häufig als “einsamster Wal der Welt” bezeichnet.",
-        "soundName": "52hz.mp4",
+        "soundName": "07_52Hz_Whale.wav",
         "marginLeft": "10%",
         "width": "80%"
     },
@@ -59,7 +59,7 @@
         "name": "Der Bloop",
         "imagePath": "Bloop.png",
         "infoText": "Als Bloop wird ein Geräusch bezeichnet, welches im Sommer 1997 mehrfach durch Sonargeräte im Pazifischen Ozean aufgenommen wurde. Lange Zeit war der Klang ein Rätsel für Forscher welche zuerst ein Tier hinter dem Geräusch vermuteten. Nach neueren Erkenntnissen vermutetet die NOAA die Ursache als Rissbildung und anschließendes Zerbrechen eines großen Eisbergs.",
-        "soundName": "bloop.mp4",
+        "soundName": "08_Bloop.wav",
         "marginLeft": "10%",
         "width": "80%"
     },
@@ -67,7 +67,7 @@
         "name": "Whistle",
         "imagePath": "Placeholder.png",
         "infoText": "Als Whistle wird ein Geräusch bezeichnet , welches am 7. Juli 1997 durch ein Hydrophon im Pazifischen Ozean aufgenommen wurde. Über die Ursache gibt es keine hunderprozentige Klarheit, aber Forscher vermuten vulkanische Aktivitäten als Auslöser.",
-        "soundName": "whistle.mp4",
+        "soundName": "10_Whistle.wav",
         "marginLeft": "10%",
         "width": "80%"
     },
@@ -75,7 +75,7 @@
         "name": "Upsweep",
         "imagePath": "Upsweep.png",
         "infoText": "Als Upsweep wird ein Geräusch bezeichnet, welches seit 1991 durch Hydrophone im Pazifischen Ozean aufgenommen wird. Die Intensität des Klanges unterliegt saisonalen Schwankungen. Nach der Meinung einiger Experten handelt es sich hierbei um Aktivitäten vulkanischem Ursprungs.",
-        "soundName": "Upsweep.mp4",
+        "soundName": "09_Upsweep.wav",
         "marginLeft": "10%",
         "width": "80%"
     }
