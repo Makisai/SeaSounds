@@ -67,7 +67,7 @@
         "name": "Whistle",
         "imagePath": "Placeholder.png",
         "infoText": "Als Whistle wird ein Geräusch bezeichnet , welches am 7. Juli 1997 durch ein Hydrophon im Pazifischen Ozean aufgenommen wurde. Über die Ursache gibt es keine hunderprozentige Klarheit, aber Forscher vermuten vulkanische Aktivitäten als Auslöser.",
-        "soundName": "10_Whistle.wav",
+        "soundName": "010_Whistle.wav",
         "marginLeft": "10%",
         "width": "80%"
     },
