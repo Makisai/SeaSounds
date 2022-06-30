@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { SoundWave } from "react-bootstrap-icons";
 import { MusicNoteList , HourglassSplit, Soundwave} from "react-bootstrap-icons";
-import { io } from "socket.io-client";
 import "./ListItem.css";
 
 const ListItem = (props) => {
-  useEffect(() => {
-      console.log("ListItem",props.socket);
-  },[])
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
   return (
     <>
       <div>
         <ListGroup.Item className="list-item">
           <img
+            alt="Button"
             onClick={() => setModalShow(true)}
             src={"/images/" + props.data.imagePath}
             style={{
@@ -30,9 +25,10 @@ const ListItem = (props) => {
         show={modalShow}
         onHide={() => setModalShow(false)}
         name={props.data.name}
-        infoText={props.data.infoText}
-        soundName={props.data.soundName}
+        infotext={props.data.infoText}
+        soundname={props.data.soundName}
         socket={props.socket}
+        position={props.position}
       />
     </>
   );
@@ -76,8 +72,9 @@ const ListItem = (props) => {
 function MyVerticallyCenteredModal(props) {
   const [playButton, setPlayButton] = React.useState(true);
   const [waitButton, setWaitButton] = React.useState(false);
-  const [soundButton, setSoundButton] = React.useState(false);
-  
+  const [soundButton] = React.useState(false);
+  const { socket, soundname, infotext, name, position } = props;
+
   return (
     <Modal
       {...props}
@@ -87,55 +84,57 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          {props.name}
+          {name}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-      { playButton ? <PlayButton setPlayButton={setPlayButton} setWaitButton={setWaitButton} socket={props.socket} soundName={props.soundName}/>: null }
-      { waitButton ? <WaitButton socket={props.socket} />: null }
-      { soundButton ? <SoundButton />: null }
+      { position < 0 ? <PlayButton setplaybutton={setPlayButton} setwaitbutton={setWaitButton} socket={socket} soundname={soundname}/>: null }
+      { position > 0 ? <WaitButton socket={props.socket} position={position}/>: null }
+      { position == 0 ? <SoundButton />: null }
         <hr></hr>
-        <p>{props.infoText}</p>
+        <p>{infotext}</p>
       </Modal.Body>
     </Modal>
   );
 }
 
 function PlayButton(props) {
+  const {setplaybutton, setwaitbutton, socket, soundname} = props
+
   const playSound = () => {
-    console.log(props)
-    props.setWaitButton(true)
-    props.setPlayButton(false)
-    props.socket.emit("add_to_queue",localStorage.getItem('userId'), props.soundName)
+    setwaitbutton(true)
+    setplaybutton(false)
+    socket.emit("add_to_queue",localStorage.getItem('userId'), soundname)
   };
   return(
-        <div class="play-container" {...props}>
-          <div class="play-button" onClick={playSound}>
+        <div className="play-container">
+          <div className="play-button" onClick={playSound}>
             <MusicNoteList color="white" size={50} />
           </div>
-          <p class="play-text">Sound abspielen</p>
+          <p className="play-text">Sound abspielen</p>
         </div>
   )
 }
 
 function WaitButton(props) {
+  const {position} = props
   return(
-  <div class="play-container" {...props}>
-    <div class="play-button">
+  <div className="play-container" {...props}>
+    <div className="play-button">
       <HourglassSplit color="white" size={50} />
     </div>
-      <p class="play-text">Dein Sound wurde in die Warteschlange eingereiht</p>
+      <p className="play-text">Dein Sound wurde an Platz {position} in die Warteschlange eingereiht</p>
     </div>
   )
 }
 
 function SoundButton(props) {
   return(
-<div class="play-container" {...props}>
-          <div class="play-button">
+<div className="play-container" {...props}>
+          <div className="play-button">
             <Soundwave color="white" size={50} />
           </div>
-          <p class="play-text">Dein Sound läuft gerade</p>
+          <p className="play-text">Dein Sound läuft gerade</p>
         </div>
   )
 }

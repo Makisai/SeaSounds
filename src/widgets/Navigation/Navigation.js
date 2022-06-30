@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Nav from 'react-bootstrap/Nav'
 
 import './Navigation.css';
 
 const Navigation = () => (
-    <Nav class="navigation" >
+    <Nav className="navigation" >
         <Nav.Item>
-            <img className="logo-image" src="/images/logo.png" />
+            <img className="logo-image" src="/images/logo.png" alt="Logo" />
         </Nav.Item>     
         <Nav.Item>
             <Nav.Link className="nav-text">Sea Sounds</Nav.Link>
