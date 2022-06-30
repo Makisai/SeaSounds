@@ -1,17 +1,21 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
+
+
 
 import './Navigation.css';
 
 const Navigation = () => (
-    <Nav className="navigation" >
-        <Nav.Item>
-            <img className="logo-image" src="/images/logo.png" alt="Logo" />
-        </Nav.Item>     
-        <Nav.Item>
-            <Nav.Link className="nav-text">Sea Sounds</Nav.Link>
-        </Nav.Item>
-</Nav>
+    <Navbar className="navigation" fixed ="top">
+        <Container>
+            <Navbar.Brand className='nav-text'>
+        <img className="logo-image" src="/images/logo.png" alt="Logo" />
+        {''} 
+      Sea Sounds
+      </Navbar.Brand>
+        </Container>
+    </Navbar>
 );
 
 export default Navigation;

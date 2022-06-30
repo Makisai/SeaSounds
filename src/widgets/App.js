@@ -49,19 +49,15 @@ const App = () => {
     };
   }, [waitingPosition, setWaitingPosition, waiting]);
 
- /* const getPosition = useSelector(state => state.position.value);
-  const dispach = useDispatch();*/
-
   return (
     <div>
       <Navigation /> 
-      <Container>
-      <h1 style={{zIndex: 1000, position: 'absolute', left: '0px', right: '0px', color: 'black'}}>position: {!waiting ? waitingPosition : "wartet altuell nicht"}</h1>
-      </Container>
       <Container className="background p-0">
         <div className="backGroundSVG">
-          <img className="bg-1" src={backGround1} alt="Background 1" />
           <img className="bg-2" src={backGround2} alt="Background 2" />
+        </div>
+        <div className="backGroundSVG">
+          <img className="bg-1" src={backGround1} alt="Background 1" />
         </div>
         <Container className="p-2 mb-4">
           <EntityList socket={socket} position={waitingPosition}/>

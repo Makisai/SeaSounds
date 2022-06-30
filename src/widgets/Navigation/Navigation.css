@@ -8,16 +8,13 @@
 
 .nav-text{
     color: #e9edd6!important;
-}
-.nav-link{
-    color: white;
-    font-size: 24px;
+    font-size: 30px!important;
     letter-spacing: 7px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .logo-image{
     width: 15%;
     float: left;
-    margin :0 40px 0 10px;
+    margin :0 5px 0 5px;
 }

@@ -34,40 +34,6 @@ const ListItem = (props) => {
   );
 }
 
-/*function MyVerticallyCenteredModal(props) {
-  const playSound = () => {
-    console.log(props)
-    props.socket.emit("add_to_queue",localStorage.getItem('userId'), props.soundName)
-    props.socket.on("position", (position) => {
-      console.log(position)
-    });
-  };
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          {props.name}
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <div class="play-container">
-          <div class="play-button" onClick={playSound}>
-            <MusicNoteList color="white" size={50} />
-          </div>
-          <p class="play-text">Sound abspielen</p>
-        </div>
-        <hr></hr>
-        <p>{props.infoText}</p>
-      </Modal.Body>
-    </Modal>
-  );
-}
-*/
 //Unterschiedliche Buttons, aber keine Funktionalität mit dem Websocket
 function MyVerticallyCenteredModal(props) {
   const [playButton, setPlayButton] = React.useState(true);
@@ -123,7 +89,7 @@ function WaitButton(props) {
     <div className="play-button">
       <HourglassSplit color="white" size={50} />
     </div>
-      <p className="play-text">Dein Sound wurde an Platz {position} in die Warteschlange eingereiht</p>
+      <p className="play-text">Dein Sound ist an Platz {position} in der Warteschlange</p>
     </div>
   )
 }
