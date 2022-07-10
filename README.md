@@ -37,7 +37,7 @@ SocketIO
 ### Inhalte
 Alle Inhalte unserer Applikationen sind, wie bereits erwähnt, in einer JSON Datei organisiert. Dadurch sind die Inhalte unserer App strukturiert einsehbar und ggf. leicht zu erweitern. In seiner allgemeinen Struktur ist ein Eintrag im  JSON File wie folgt aufgebaut:
 
-
+```
 "Pottwal": {
         "name": "Der Pottwal",
         "imagePath": "Pottwal.PNG",
@@ -46,7 +46,7 @@ Alle Inhalte unserer Applikationen sind, wie bereits erwähnt, in einer JSON Dat
         "marginLeft": "10%",
         "width": "70%"
     },
-
+```
 
 ### Hosting
 Anfänglich war angedacht, dass das Frontend und Backend über externe Server gehostet werden sollten. Diese Idee wurde aber schlussendlich verworfen, da das Netzwerk der Ausstellung lediglich als Intranet diente und der mobile Datenempfang teilweise gar nicht oder nur sehr schlecht vorhanden war. Aus diesem Grund wurde sowohl das Frontend als auch der Warteschlangen-Server auf lokaler Ebene gehostet. Die Besucher:innen konnten unabhängig vom Hosting die Web-App mittels QR-Code auf dem eigenen Smartphone öffnen. 
