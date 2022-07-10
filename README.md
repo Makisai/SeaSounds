@@ -22,15 +22,15 @@ Die Komponenten beziehen die anzuzeigenden Informationen aus der entityContent.j
 Nach dem Hinzufügen des Sounds zur Warteschlange erhält der User durch einen Countdown optisch Feedback darüber, wann sein gewählter Sound abgespielt wird.
 
 ### Bibliotheken
-Bootstrap
+**Bootstrap**
 - CSS-Framework
 - Gestaltungsvorlagen für Buttons, Typografie und Co. 
 - Erspart Designarbeit schafft mehr Raum für Backendprogrammierung
 
-React
+**React**
 - Komponentenbasierte JavaScript Bibliothek zum Erstellen von (Web)Benutzeroberflächen
 
-SocketIO
+**SocketIO**
 - Library zur Kommunikation zwischen Client(Website) und Server(seasounds-api Backend)
 - Weniger Overhead als reines WebSocket und dadurch eine niedrigere Technische Einstiegshürde
 
